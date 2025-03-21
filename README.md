@@ -1,4 +1,4 @@
-MONGO DB  
+MONGO DB Notes
 Practice yourself ( Examples )
 > show dbs
 > use appdb
