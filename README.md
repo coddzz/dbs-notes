@@ -1,5 +1,5 @@
 MONGO DB Notes
-Practice yourself ( Examples )
+( Examples )
 > show dbs
 > use appdb
 > db.users.insertOne ({name:”kevin”});
