@@ -44,9 +44,14 @@ const userSchema = new mongoose.Schema({
     hobbies: [String]
 })
 
-// simple function on schemas
+// simple functions on schemas
 userSchema.methods.sayHi = function() {
     console.log('Hi! My name is '+this.name)
+}
+
+// create a new function findByName
+userSchema.statics.findByName = function(name) {
+    return this.where({name: new RegExp(name,"i")})
 }
 
 //Creates a virtual type with the given name

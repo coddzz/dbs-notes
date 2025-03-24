@@ -7,14 +7,8 @@ async function main(){
     await mongoose.connect('mongodb://127.0.0.1:27017/testdbs')
     console.log("db server is running !!")
 
-    const user = await User.create({
-
-        name: "Amal",
-        age: 24,
-        email: "amal123@gmmail.com"
-    })
-    console.log(user.namedemail)
-    user.sayHi()
+    const user = await User.findByName("kevin")
+    console.log(user)
 
 
 }
