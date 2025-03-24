@@ -2,9 +2,9 @@ const mongoose = require ("mongoose")
 
 const addressSchema = new mongoose.Schema({
 
-    Street: String,
-    City: String,
-    Pincode: Number
+    street: String,
+    city: String,
+    pincode: Number
 })
 
 const userSchema = new mongoose.Schema({
@@ -44,7 +44,12 @@ const userSchema = new mongoose.Schema({
     hobbies: [String]
 })
 
-//virtual keyword use like a function
+// simple function on schemas
+userSchema.methods.sayHi = function() {
+    console.log('Hi! My name is '+this.name)
+}
+
+//Creates a virtual type with the given name
 userSchema.virtual("namedemail").get(function(){
     return `${this.name}\t email: ${this.email}`
 })

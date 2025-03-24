@@ -14,6 +14,7 @@ async function main(){
         email: "amal123@gmmail.com"
     })
     console.log(user.namedemail)
+    user.sayHi()
 
 
 }
