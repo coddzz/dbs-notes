@@ -10,4 +10,13 @@ async function main(){
     const user = await User.findOne({name:"sarath"})
     user.save();
     console.log(user)
+    
+    const userA = await User
+        .where("name")
+        .equals("abhijith")
+        .limit(1)
+        .populate("bestFriends")
+        console.log(userA.namedemail)
+
+    console.log(userA)
 }

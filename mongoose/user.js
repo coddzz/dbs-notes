@@ -69,6 +69,7 @@ userSchema.pre("save", function (next){
     next()
 })
 
+//middleware (excecute after save)
 userSchema.post("save", function(doc, next){
     doc.sayHi()
     next()
