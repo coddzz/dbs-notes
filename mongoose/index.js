@@ -9,9 +9,11 @@ async function main(){
 
     const user = await User.create({
 
-        name: "Kevin",
-        age: 23
+        name: "Amal",
+        age: 24,
+        email: "amal123@gmmail.com"
     })
     console.log(user)
+
 
 }
