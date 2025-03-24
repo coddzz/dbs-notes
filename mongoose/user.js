@@ -44,4 +44,9 @@ const userSchema = new mongoose.Schema({
     hobbies: [String]
 })
 
+//virtual keyword use like a function
+userSchema.virtual("namedemail").get(function(){
+    return `${this.name}\t email: ${this.email}`
+})
+
 module.exports = mongoose.model("User", userSchema);

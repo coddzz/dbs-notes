@@ -13,7 +13,7 @@ async function main(){
         age: 24,
         email: "amal123@gmmail.com"
     })
-    console.log(user)
+    console.log(user.namedemail)
 
 
 }
