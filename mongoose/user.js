@@ -28,10 +28,9 @@ const userSchema = new mongoose.Schema({
         lowercase:true
     },
     createdAt:{
-
         type : Date,
-        default: () => Date.now(),
-        immutable: true
+        immutable: true,
+        default: () => Date.now()
     },
     updatedAt: {
         type: Date,
@@ -63,5 +62,12 @@ userSchema.query.byName = function(name){
 userSchema.virtual("namedemail").get(function(){
     return `${this.name}\t email: ${this.email}`
 })
+
+//middleware (excecute before save)
+userSchema.pre("save", function (next){
+    this.updatedAt = Date.now()
+    next()
+})
+
 
 module.exports = mongoose.model("User", userSchema);
