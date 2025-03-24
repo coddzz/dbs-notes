@@ -1,0 +1,23 @@
+{
+  "name": "mongoose",
+  "version": "1.0.0",
+  "description": "mongoose basics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coddzz/dbs-notes.git"
+  },
+  "author": "coddzz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coddzz/dbs-notes/issues"
+  },
+  "homepage": "https://github.com/coddzz/dbs-notes#readme",
+  "dependencies": {
+    "mongoose": "^8.12.2"
+  }
+}
