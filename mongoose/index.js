@@ -7,7 +7,7 @@ async function main(){
     await mongoose.connect('mongodb://127.0.0.1:27017/testdbs')
     console.log("db server is running !!")
 
-    const user = await User.findByName("kevin")
+    const user = await User.find().byName("kevin")
     console.log(user)
 
 
