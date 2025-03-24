@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/coddzz/dbs-notes#readme",
   "dependencies": {
-    "mongoose": "^8.12.2"
+    "date-fns": "^4.1.0",
+    "mongoose": "^8.12.2",
+    "uuid": "^11.1.0"
   }
 }
